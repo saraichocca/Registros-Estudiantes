@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Estudiantes</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(120deg, #1d2671, #c33764);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: #ffffff;
+            width: 420px;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            color: #1d2671;
+            font-size: 26px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background: #1d2671;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #151c55;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Registro de Estudiantes</h1>
+        <div class="subtitle">Ejercicio 02 – Flask & MySQL</div>
+
+        <form action="/guardar" method="post">
+            <label>Nombre del Estudiante</label>
+            <input type="text" name="nombre" placeholder="Ingrese el nombre" required>
+
+            <label>Dirección</label>
+            <input type="text" name="direccion" placeholder="Ingrese la dirección" required>
+
+            <label>Ciudad</label>
+            <input type="text" name="ciudad" placeholder="Ingrese la ciudad" required>
+
+            <input type="submit" value="Guardar Estudiante">
+        </form>
+
+        <footer>
+            Desarrollo Backend con Python
+        </footer>
+    </div>
+
+</body>
+</html>
+
